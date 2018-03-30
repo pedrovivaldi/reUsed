@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar text-center>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form #formCtrl="ngForm">
+        <div align="center">
+            
+          <h1> Profile</h1>
+          <img class="profile-image" src="assets/img/unnamed.jpg">
+            <h4>Pedro Vivaldi, FACAMP</h4>
+            <h5>21 years old</h5>
+            <h6>Birthdate: 12/11/1996</h6>
+        </div>
+        
+    <button color="secondary" [disabled]="!formCtrl.form.valid" ion-button block (click)="save()">Save</button>
+    <button color="danger" ion-button block (click)="reset()">Reset</button>
+  </form>
+</ion-content>

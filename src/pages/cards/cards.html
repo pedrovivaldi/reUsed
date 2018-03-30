@@ -1,15 +1,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'CARDS_TITLE' | translate }}</ion-title>
+    <ion-title text-center>
+      {{ 'CARDS_TITLE' | translate }}
+    </ion-title>
+
+    <!-- <ion-select [(ngModel)]="localization">
+        <ion-option>Minha Localização</ion-option>
+        <ion-option>Campinas</ion-option>
+        <ion-option>São Paulo</ion-option>
+        <ion-option>Belo Horizonte</ion-option>
+      </ion-select> -->
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="toggleSearchbar()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="settings()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+
+  <ion-toolbar *ngIf="showSearchbar">
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  </ion-toolbar>
 
 </ion-header>
 
+<ion-content #content>
 
-<ion-content>
-
-  <ion-card *ngFor="let item of cardItems">
+  <ion-card *ngFor="let item of cardItems" (click)="cardClicked($event, item)">
 
     <ion-item>
       <ion-avatar item-start>
@@ -22,21 +44,22 @@
     <img [src]="item.image">
 
     <ion-card-content>
-      <p>{{item.content}}</p>
+      <h1>{{ item.name }}</h1>
+      <p>{{item.about}}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button color="primary" clear small icon-start>
-            <ion-icon name='thumbs-up'></ion-icon>
-            12 Likes
-          </button>
+          <ion-icon name='thumbs-up'></ion-icon>
+          12 Likes
+        </button>
       </ion-col>
       <ion-col>
         <button ion-button color="primary" clear small icon-start>
-            <ion-icon name='text'></ion-icon>
-            4 Comments
-          </button>
+          <ion-icon name='text'></ion-icon>
+          4 Comments
+        </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>

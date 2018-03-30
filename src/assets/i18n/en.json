@@ -8,27 +8,24 @@
   "LOGIN": "Sign in",
   "SIGNUP": "Sign up",
 
-  "TAB1_TITLE": "Items",
-  "TAB2_TITLE": "Search",
-  "TAB3_TITLE": "Settings",
+  "TAB1_TITLE": "Buy",
+  "TAB2_TITLE": "Sell",
+  "TAB3_TITLE": "Profile",
 
   "MAP_TITLE": "Map",
 
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Buy and Sell App!",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Buy and Sell App</b> facilitates your regional purchases and sales from your daily routine",
 
-  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+  "TUTORIAL_SLIDE2_TITLE": "How to use Buy and Sell",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "You can just look for offers, or you can sell your product/service!",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+  "TUTORIAL_SLIDE3_TITLE": "Ready to Buy and Sell?",
 
-  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
-
-  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "WELCOME_INTRO": "Log in and enjoy! If you are not registered, register below!",
 
   "SETTINGS_TITLE": "Settings",
   "SETTINGS_OPTION1": "Option 1",
@@ -49,7 +46,7 @@
   "SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
   "SIGNUP_BUTTON": "Sign up",
 
-  "LIST_MASTER_TITLE": "Items",
+  "LIST_MASTER_TITLE": "Your offers",
 
   "ITEM_CREATE_TITLE": "New Item",
   "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
@@ -61,8 +58,8 @@
   "CANCEL_BUTTON": "Cancel",
   "DELETE_BUTTON": "Delete",
 
-  "CARDS_TITLE": "Social",
+  "CARDS_TITLE": "Offers nearby",
 
-  "SEARCH_TITLE": "Search",
+  "SEARCH_TITLE": "Sell",
   "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\""
 }

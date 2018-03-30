@@ -1,13 +1,7 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar text-center>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -18,7 +12,7 @@
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
-          <img [src]="item.profilePic" />
+          <img [src]="item.image" />
         </ion-avatar>
         <h2>{{item.name}}</h2>
         <p>{{item.about}}</p>
@@ -32,4 +26,9 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
+  
+  <ion-fab center bottom>
+      <button ion-fab (click)="addItem()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
 </ion-content>

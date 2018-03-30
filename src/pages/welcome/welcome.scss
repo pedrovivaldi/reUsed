@@ -20,9 +20,14 @@ page-welcome {
     margin-top: -64px;
     text-align: center;
   }
+
+  p {
+    text-align: center;
+  }
+
   .splash-logo {
     margin: auto;
-    background: url('../assets/img/appicon.png') repeat transparent;
+    background: url('../assets/img/logo.png') transparent;
     background-size: 100%;
     width: 128px;
     height: 128px;
@@ -33,8 +38,16 @@ page-welcome {
     max-width: 80%;
     margin: auto;
   }
+  .marginNone {
+    margin: 0
+  }
+
+  .welcomeButton {
+    margin: 10px;
+  }
+
   button.login {
-    margin-top: 25px;
+    margin-top: 0px;
     background-color: white;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     color: #333;

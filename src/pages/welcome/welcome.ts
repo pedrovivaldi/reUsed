@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { TranslateService } from '@ngx-translate/core';
+import { User } from '../../providers/user/user';
+import { MainPage } from '../pages';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -14,13 +17,38 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) { }
+  account: { email: string, password: string } = {
+    email: 'test@example.com',
+    password: 'test'
+  };
+  private loginErrorString: string;
 
-  login() {
-    this.navCtrl.push('LoginPage');
-  }
+  constructor(public navCtrl: NavController,
+    public user: User,
+    public toastCtrl: ToastController,
+    public translateService: TranslateService) {
+    this.translateService.get('LOGIN_ERROR').subscribe((value) => {
+      this.loginErrorString = value;
+    })
+   }
 
   signup() {
     this.navCtrl.push('SignupPage');
+  }
+
+  // Attempt to login in through our User service
+  doLogin() {
+    this.user.login(this.account).subscribe((resp) => {
+      this.navCtrl.push(MainPage);
+    }, (err) => {
+      this.navCtrl.push(MainPage);
+      // Unable to log in
+      let toast = this.toastCtrl.create({
+        message: this.loginErrorString,
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    });
   }
 }
